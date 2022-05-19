@@ -13,7 +13,7 @@ inputCountry.addEventListener('input', debounce(onInputCountry,DEBOUNCE_DELAY));
 
 function onInputCountry(e) {
     e.preventDefault();
-    country = e.target.value;
+    country = e.target.value.trim();
     if (country === '') {
       return  listEl.innerHTML = '';
     }
